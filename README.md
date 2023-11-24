@@ -1,107 +1,22 @@
-
 <html>
 <head>
   <title>Solar</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
-    
+    /* Your existing styles */
+  </style>
+
+  <style>
     body {
-      background-color: #000000; /* Black background */
-      color: #ffffff; /* White text */
-      font-family: 'Consolas', monospace; /* Consolas font for the entire body */
-      opacity: 0;
-      animation: fadeIn 2s forwards; /* Fading-in animation */
-      text-align: center; /* Center align all text */
-      overflow: hidden; /* Hide overflowing stars */
-      position: relative;
-      filter: blur(10px); /* Initial blur */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
-    
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        filter: blur(10px); /* Start with blur */
-      }
-      50% {
-        opacity: 0; /* Maintain opacity at 0. */
-      }
-      100% {
-        opacity: 1;
-        filter: blur(0); /* Unblur gradually */
-      }
-    }
-    
-    h1 {
-      font-size: 60px;
-      font-family: 'Alex Brush', cursive; /* Custom font */
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    
-    p {
-      font-size: 18px;
-      font-family: 'Alex Brush', cursive; /* Custom font */
-      position: absolute;
-      bottom: 0; /* Position at the bottom */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0; /* Set initial opacity to 0 */
-    }
-    
-    a {
-      color: #ffffff; /* White link color */
-      text-decoration: none; /* Remove underline */
-    }
-    
-    a:hover {
-      text-decoration: underline; /* Add underline on hover */
-    }
-    
-    /* Stars animation */
-    .stars {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: #ffffff;
-      animation: twinkle 1s infinite;
-    }
-    
-    @keyframes twinkle {
-      0% {
-        opacity: 0;
-        transform: scale(0);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(0);
-      }
-    }
-    
-    /* Panning animation */
-    .panning {
-      animation: pan 30s linear infinite; /* More aggressive panning */
-    }
-    
-    @keyframes pan {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: -200% 0; /* Increased panning distance */
-      }
+
+    #text {
+      font-size: 15px; /* Adjust the font size as needed */
+      text-align: center;
     }
   </style>
 </head>
@@ -150,27 +65,8 @@
           body.style.overflow = "auto";
         }, 1000);
       });
-      
 
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-      }
-
-      #text {
-        font-size: 15px; /* Adjust the font size as needed */
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="text"></div>
-
-    <script>
+      // Your second script starts here
       var message =
         "Solar is a powerful discord raiding bot with a primary focus on taking down servers that promote and engage in illegal activities such as pedophilia, scams, RCTA, and furry servers. Our mission is to actively combat and put an end to these communities as they are 100% weird as hell. If you have any questions or concerns, DM 444cursed (1173054262884962377) on discord";
       var speed = 50; // Adjust the speed (lower values make it faster)
@@ -189,45 +85,6 @@
 
       // Start after initial delay
       setTimeout(autoTyper, initialDelay);
-    </script>
-  </body>
-</html>
-setTimeout(function() {
-        intro.style.transition = "opacity 2s";
-        intro.style.opacity = "0";
-        
-        // Fade in the paragraph text
-        setTimeout(function() {
-          paragraph.style.color = "#ffffff"; // Set text color to white
-          paragraph.style.transition = "opacity 2s";
-          paragraph.style.opacity = "1";
-          
-          // Insert and type the additional text
-          const additionalText = "Solar is a powerful discord raiding bot with a primary focus on taking down servers that promote and engage in illegal activities such as pedophilia, scams, RCTA, and furry servers. Our mission is to actively combat and put an end to these communities as they are 100% weird as hell. If you have any questions, DM 444cursed (1173054262884962377)";
-          
-          const additionalParagraph = document.createElement('p');
-          additionalParagraph.style.fontFamily = 'Consolas, monospace'; // Set Consolas font
-          additionalParagraph.style.fontSize = '18px';
-          additionalParagraph.style.position = 'absolute';
-          additionalParagraph.style.bottom = '50%';
-          additionalParagraph.style.left = '50%';
-          additionalParagraph.style.transform = 'translateX(-50%)';
-          additionalParagraph.style.opacity = '0';
-          body.appendChild(additionalParagraph);
-
-          const typingEffect = setInterval(function() {
-            if (additionalText.length > 0) {
-              additionalParagraph.textContent += additionalText[0];
-              additionalText = additionalText.slice(1);
-            } else {
-              clearInterval(typingEffect);
-              additionalParagraph.style.transition = "opacity 2s";
-              additionalParagraph.style.opacity = "1";
-            }
-          }, 75);
-          
-        }, 2000); // Wait for 2 seconds after the introduction fades out
-      }, 6000);
     };
   </script>
 </body>
