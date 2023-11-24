@@ -151,7 +151,48 @@
         }, 1000);
       });
       
-      setTimeout(function() {
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #text {
+        font-size: 15px; /* Adjust the font size as needed */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text"></div>
+
+    <script>
+      var message =
+        "Solar is a powerful discord raiding bot with a primary focus on taking down servers that promote and engage in illegal activities such as pedophilia, scams, RCTA, and furry servers. Our mission is to actively combat and put an end to these communities as they are 100% weird as hell. If you have any questions or concerns, DM 444cursed (1173054262884962377) on discord";
+      var speed = 50; // Adjust the speed (lower values make it faster)
+      var initialDelay = 3000; // Initial delay in milliseconds (3 seconds)
+
+      var i = 0;
+
+      function autoTyper() {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+
+        if (i < message.length) {
+          setTimeout(autoTyper, speed);
+        }
+      }
+
+      // Start after initial delay
+      setTimeout(autoTyper, initialDelay);
+    </script>
+  </body>
+</html>
+setTimeout(function() {
         intro.style.transition = "opacity 2s";
         intro.style.opacity = "0";
         
